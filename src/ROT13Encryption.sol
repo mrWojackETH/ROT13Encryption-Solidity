@@ -50,8 +50,8 @@ contract ROT13Encryption {
                 }
                 if iszero(eq(char, 0x20))
                 {
-                    // add 13 to char
-                    {mstore8(add(add(result, 0x20), mul(i,1)), add(char, 13))}
+                    // substract 13 to char
+                    {mstore8(add(add(result, 0x20), mul(i,1)), sub(char, 13))}
                 }
             }
 
